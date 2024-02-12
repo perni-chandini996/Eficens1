@@ -19,7 +19,7 @@ import com.tutorial.service.ProjectService;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
-@RequestMapping("/api/projects")
+@RequestMapping("/api")
 public class ProjectController {
 
 	@Autowired
@@ -31,22 +31,23 @@ public class ProjectController {
 	}
 
 	@GetMapping(params = "buy")
-	public ResponseEntity<List<Project>> getAllProjects(@RequestParam(value = "search", required = true) String search) {
+	public ResponseEntity<List<Project>> getAllProjects(
+			@RequestParam(value = "search", required = true) String search) {
 		return ResponseEntity.ok().body(projectService.getAll(search));
 	}
-	
+
 	@PostMapping
 	public ResponseEntity<Project> insertProject(@RequestBody Project project) {
 		return ResponseEntity.ok().body(projectService.insertProject(project));
 	}
 
 	@PutMapping
-    public ResponseEntity<Project> updateProject(@RequestBody Project project) {
-        return ResponseEntity.ok().body(projectService.updateProject(place));
-    }
-	
+	public ResponseEntity<Project> updateProject(@RequestBody Project project) {
+		return ResponseEntity.ok().body(projectService.updateProject(place));
+	}
+
 	@DeleteMapping
-	public ResponseEntity<Long> deleteProduct(@RequestParam(name="projectId", value="projectId") long id) {
-        return ResponseEntity.ok().body(projectService.deleteProject(id));
-    }
+	public ResponseEntity<Long> deleteProduct(@RequestParam(name = "projectId", value = "projectId") long id) {
+		return ResponseEntity.ok().body(projectService.deleteProject(id));
+	}
 }
