@@ -30,23 +30,24 @@ public class ProjectController {
 		return ResponseEntity.ok().body(projectService.getAll());
 	}
 
-	@GetMapping(params = "search")
-	public ResponseEntity<List<Project>> getAllProjects(@RequestParam(value = "search", required = true) String search) {
+	@GetMapping(params = "Go")
+	public ResponseEntity<List<Project>> getAllProjects(
+			@RequestParam(value = "search", required = true) String search) {
 		return ResponseEntity.ok().body(projectService.getAll(search));
 	}
-	
+
 	@PostMapping
 	public ResponseEntity<Project> insertProject(@RequestBody Project project) {
 		return ResponseEntity.ok().body(projectService.insertProject(project));
 	}
 
 	@PutMapping
-    public ResponseEntity<Project> updateProject(@RequestBody Project project) {
-        return ResponseEntity.ok().body(projectService.updateProject(project));
-    }
-	
+	public ResponseEntity<Project> updateProject(@RequestBody Project project1) {
+		return ResponseEntity.ok().body(projectService.updateProject(project));
+	}
+
 	@DeleteMapping
-	public ResponseEntity<Long> deleteProduct(@RequestParam(name="projectId", value="projectId") long id) {
-        return ResponseEntity.ok().body(projectService.deleteProject(id));
-    }
+	public ResponseEntity<Long> deleteProduct(@RequestParam(name = "projectId", value = "projectId") long id) {
+		return ResponseEntity.ok().body(projectService.deleteProject(id));
+	}
 }
