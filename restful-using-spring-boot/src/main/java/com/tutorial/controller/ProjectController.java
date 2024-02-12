@@ -19,7 +19,7 @@ import com.tutorial.service.ProjectService;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
-@RequestMapping("/api/projects/v1")
+@RequestMapping("/ap")
 public class ProjectController {
 
 	@Autowired
