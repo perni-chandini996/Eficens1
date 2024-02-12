@@ -30,7 +30,7 @@ public class ProjectController {
 		return ResponseEntity.ok().body(projectService.getAll());
 	}
 
-	@GetMapping(params = "search")
+	@GetMapping(params = "buy")
 	public ResponseEntity<List<Project>> getAllProjects(@RequestParam(value = "search", required = true) String search) {
 		return ResponseEntity.ok().body(projectService.getAll(search));
 	}
