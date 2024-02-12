@@ -40,7 +40,7 @@ public class ProjectController {
 		return ResponseEntity.ok().body(projectService.insertProject(project));
 	}
 
-	@PutMapping
+	@PutMap
     public ResponseEntity<Project> updateProject(@RequestBody Project project) {
         return ResponseEntity.ok().body(projectService.updateProject(place));
     }
