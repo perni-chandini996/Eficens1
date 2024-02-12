@@ -42,7 +42,7 @@ public class ProjectController {
 
 	@PutMapping
     public ResponseEntity<Project> updateProject(@RequestBody Project project) {
-        return ResponseEntity.ok().body(projectService.updateProject(project));
+        return ResponseEntity.ok().body(projectService.updateProject(place));
     }
 	
 	@DeleteMapping
