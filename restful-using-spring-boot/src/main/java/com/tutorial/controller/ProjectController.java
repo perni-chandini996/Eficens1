@@ -19,7 +19,7 @@ import com.tutorial.service.ProjectService;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
-@RequestMapping("/ap/react")
+@RequestMapping("/ap/vue/")
 public class ProjectController {
 
 	@Autowired
