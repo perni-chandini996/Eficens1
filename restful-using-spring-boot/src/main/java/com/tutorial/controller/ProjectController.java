@@ -19,7 +19,7 @@ import com.tutorial.service.ProjectService;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
-@RequestMapping("/ap/vue/")
+@RequestMapping("/ap/angular")
 public class ProjectController {
 
 	@Autowired
@@ -30,7 +30,7 @@ public class ProjectController {
 		return ResponseEntity.ok().body(projectService.getAll());
 	}
 
-	@GetMapping(params = "buy")
+	@GetMapping(params = "treee")
 	public ResponseEntity<List<Project>> getAllProjects(@RequestParam(value = "search", required = true) String search) {
 		return ResponseEntity.ok().body(projectService.getAll(search));
 	}
@@ -40,7 +40,7 @@ public class ProjectController {
 		return ResponseEntity.ok().body(projectService.insertProject(project));
 	}
 
-	@PutMapping
+	@PutMap
     public ResponseEntity<Project> updateProject(@RequestBody Project project) {
         return ResponseEntity.ok().body(projectService.updateProject(place));
     }
