@@ -19,7 +19,7 @@ import com.tutorial.service.ProjectService;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
-@RequestMapping("/ap/angular")
+@RequestMapping("/ap/js")
 public class ProjectController {
 
 	@Autowired
@@ -48,6 +48,6 @@ public class ProjectController {
 	@DeleteMapping
 	public ResponseEntity<Long> deleteProduct(@RequestParam(name="projectId", value="projectId") long id) {
 		//this is a conflict test for dheeraj
-        return ResponseEntity.ok().body(projectService.deleteProject(id));
+        return ResponseEntity.ok().body(projectService.deleteProject(id)); 
     }
 }
