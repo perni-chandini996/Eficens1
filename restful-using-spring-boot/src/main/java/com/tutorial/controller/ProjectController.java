@@ -47,6 +47,7 @@ public class ProjectController {
 	
 	@DeleteMapping
 	public ResponseEntity<Long> deleteProduct(@RequestParam(name="projectId", value="projectId") long id) {
+	// dheeraj mergerequest test
         return ResponseEntity.ok().body(projectService.deleteProject(id));
     }
 }
