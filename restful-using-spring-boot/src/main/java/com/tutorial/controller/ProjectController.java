@@ -19,7 +19,7 @@ import com.tutorial.service.ProjectService;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
-@RequestMapping("/ap/angular")
+@RequestMapping("/ap/angular1")
 public class ProjectController {
 
 	@Autowired
